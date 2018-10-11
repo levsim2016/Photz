@@ -1,7 +1,29 @@
 {
   "name": "photz",
   "version": "0.1.0",
-  "private": true,
+  "description": "Personal portfolio website for friend of mine. Site contains gallery, about page, contact page and other features for getting feedback from visitors",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/levsim2016/Photz.git"
+  },
+  "keywords": [
+    "personal",
+    "site",
+    "photographer",
+    "portfolio",
+    "webpack",
+    "react",
+    "js",
+    "html",
+    "css",
+    "webpack"
+  ],
+  "author": "Lev Simionenko aka levsim2016",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/levsim2016/Photz/issues"
+  },
+  "homepage": "https://github.com/levsim2016/Photz#readme",
   "dependencies": {
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
