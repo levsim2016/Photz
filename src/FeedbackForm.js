@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 
-export default class Layout extends PureComponent {
+export default class FeedbackForm extends PureComponent {
   render() {
     const { className, children } = this.props;
     return (
