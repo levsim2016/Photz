@@ -1,9 +1,6 @@
-@import 'fonts.scss';
-
 header{
-    @include lato-font('bold');
-
     width: 100%;
+    font-family: 'Lato';
     position: fixed;
     z-index: 1;
 }

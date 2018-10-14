@@ -18,8 +18,16 @@ class App extends Component {
           <Menu />
           <SocialIcons />
         </Header>
-        <Layout className="discover">
-          <h1>Photz</h1>
+        <Layout className="discover flex-column align-items-center justify-content-center">
+          <h1>
+            Free portfolio template
+          </h1>
+          <span>
+            for photographers
+          </span>
+          <a href="" className="d-flex align-items-center justify-content-center">
+            DISCOVER
+          </a>
         </Layout>
         {/*<Layout>
           <h2>Последние работы</h2>
