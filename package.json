@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/levsim2016/Photz#readme",
   "dependencies": {
+    "lato-font": "^3.0.0",
     "node-sass": "^4.9.3",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",

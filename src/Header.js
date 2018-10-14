@@ -1,10 +1,10 @@
 import React, { PureComponent } from 'react';
+import './styles/Header.scss';
 
 export default class Header extends PureComponent {
   render() {
-    const { className } = this.props;
     return (
-      <header className={className}>
+      <header>
         {this.props.children}
       </header>
     );
