@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="7" height="18" viewBox="0 0 7 18">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #6c6a68;
+        fill-rule: evenodd;
+        opacity: 0.5;
+      }
+    </style>
+  </defs>
+  <path id="facebook" class="cls-1" d="M1214.51,35.486v2.478H1213v3.03h1.51V50h3.11v-9h2.09s0.19-1.453.29-3.042h-2.37V35.881a0.8,0.8,0,0,1,.68-0.727H1220V32h-2.3C1214.44,32,1214.51,35.033,1214.51,35.486Z" transform="translate(-1213 -32)"/>
+</svg>

@@ -5,6 +5,7 @@ import Layout from './Layout';
 import Header from './Header';
 import Menu from './Menu';
 import SocialIcons from './SocialIcons';
+import Logo from './Logo';
 import Gallery from './Gallery';
 import CollectionList from './CollectionList';
 import FeedbackForm from './FeedbackForm';
@@ -16,7 +17,7 @@ class App extends Component {
       <div className="App">
         <Header>
           <Menu />
-          <div className="d-flex col-12 col-lg-4 justify-content-center">R</div>
+          <Logo />
           <SocialIcons />
         </Header>
         <Layout className="discover flex-column align-items-center justify-content-center">
