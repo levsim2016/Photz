@@ -16,6 +16,7 @@ class App extends Component {
       <div className="App">
         <Header>
           <Menu />
+          <div className="d-flex col-12 col-lg-4 justify-content-center">R</div>
           <SocialIcons />
         </Header>
         <Layout className="discover flex-column align-items-center justify-content-center">
