@@ -1,21 +1,30 @@
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import './styles/Menu.scss';
 
-export default class Menu extends PureComponent {
+//ссылки в меню будут менять на активные если компонент с состоянием
+export default class Menu extends Component {
   render() {
     return (
-      <ul className="d-flex col-12 col-lg-4 menu">
-        <li>
-            <NavLink to="/" className="headerLink" activeClassName="current">Home</NavLink>
-        </li>
-        <li>
-            <NavLink to="/gallery" className="headerLink" activeClassName="current">Gallery</NavLink>
-        </li>
-        <li>
-            <NavLink to="/contact" className="headerLink" activeClassName="current">Contact</NavLink>
-        </li>
-      </ul>
+      <nav className="d-flex col-12 col-lg-4 menu">
+        <ul className="d-flex">
+          <li>
+              <NavLink exact to="/" className="headerLink" activeClassName="current">
+                Начало
+              </NavLink>
+          </li>
+          <li>
+              <NavLink to="/gallery" className="headerLink" activeClassName="current">
+                Работы
+              </NavLink>
+          </li>
+          <li>
+              <NavLink to="/contact" className="headerLink" activeClassName="current">
+                Связаться со мной
+              </NavLink>
+          </li>
+        </ul>
+      </nav>
     );
   }
 }

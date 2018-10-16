@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import * as pages from './Pages/pages';
 import Layout from './Layout';
 import Header from './Header';
@@ -20,28 +21,38 @@ class App extends Component {
           <Logo />
           <SocialIcons />
         </Header>
-        <Layout className="discover flex-column align-items-center justify-content-center">
-          <h1>
-            Free portfolio template
-          </h1>
-          <span>
-            for photographers
-          </span>
-          <a href="" className="d-flex align-items-center justify-content-center">
-            DISCOVER
-          </a>
-        </Layout>
-        {/*<Layout>
-          <h2>Последние работы</h2>
-          <Gallery fetchAmount={4} maxAmount={4}/>
-        </Layout>
-        <Layout>
-          <CollectionList />
-        </Layout>
-        <Layout>
-          <h2>Оставайся в курсе</h2>
-          <FeedbackForm />
-        </Layout> */}
+        <Switch>
+          <Route exact path="/" render={() => (
+            <Layout className="discover flex-column align-items-center justify-content-center">
+              <h1 className="title">
+                Харизматичный и амбициозный
+              </h1>
+              <span className="description">
+                Даниил Жмаев
+              </span>
+              <Link to="/gallery" className="d-flex align-items-center justify-content-center discoverButton">
+                Насладиться творчеством
+              </Link>
+            </Layout>
+          )}/>
+          <Route path="/gallery" render={() => (
+            <>
+              <Layout>
+                <h2>Последние работы</h2>
+                <Gallery fetchAmount={4} maxAmount={4}/>
+              </Layout>
+              <Layout>
+                <CollectionList />
+              </Layout>
+            </>
+          )}/>
+          <Route path="/contact" render={() => (
+            <Layout>
+              <h2>Оставайся в курсе</h2>
+              <FeedbackForm />
+            </Layout>
+          )}/>
+        </Switch>
       </div>
     );
   }

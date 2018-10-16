@@ -2,8 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 
-import 'typeface-lato';
-import 'typeface-playfair-display';
 import './styles/index.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';

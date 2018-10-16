@@ -5,9 +5,9 @@ export default class Layout extends PureComponent {
   render() {
     const { className, children } = this.props;
     return (
-      <div className={"container-fluid d-flex layout " + className}>
+      <main className={"container-fluid d-flex layout " + className}>
         {children}
-      </div>
+      </main>
     );
   }
 }
