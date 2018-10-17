@@ -6,7 +6,7 @@ export default class Header extends PureComponent {
     return (
       <header className="container-fluid">
         <div className="container h-100">
-          <div className="row h-100 align-items-center">
+          <div className="row h-100 align-items-center headerRow">
             {this.props.children}
           </div>          
         </div>        

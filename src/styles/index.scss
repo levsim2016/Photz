@@ -1,4 +1,10 @@
 $grid-gutter-width: 0;
+$container-max-widths: (
+  sm: 540px,
+  md: 690px,
+  lg: 960px,
+  xl: 1200px
+);
 
 @import "../../node_modules/bootstrap/scss/functions";
 @import "../../node_modules/bootstrap/scss/variables";

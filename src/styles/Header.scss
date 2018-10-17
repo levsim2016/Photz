@@ -5,4 +5,9 @@ header{
     font-family: 'Lato-Light';
     position: fixed;
     z-index: 1;
+
+    .headerRow{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }

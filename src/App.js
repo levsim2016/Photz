@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
-import { Link } from 'react-router-dom';
 import * as pages from './Pages/pages';
 import Layout from './Layout';
 import Header from './Header';
@@ -10,6 +9,7 @@ import Logo from './Logo';
 import Gallery from './Gallery';
 import CollectionList from './CollectionList';
 import FeedbackForm from './FeedbackForm';
+import ButtonLink from './ButtonLink';
 import './styles/App.scss';
 
 class App extends Component {
@@ -30,20 +30,26 @@ class App extends Component {
               <span className="description">
                 Даниил Жмаев
               </span>
-              <Link to="/gallery" className="d-flex align-items-center justify-content-center discoverButton">
+              <ButtonLink to="/gallery" className="discoverButton">
                 Насладиться творчеством
-              </Link>
+              </ButtonLink>
             </Layout>
           )}/>
           <Route path="/gallery" render={() => (
             <>
               <Layout>
-                <h2>Последние работы</h2>
-                <Gallery fetchAmount={4} maxAmount={4}/>
+                <div className="container">
+                  <div className="row">
+                    <div className="d-flex col justify-content-center">
+                      <h2>Последние работы</h2>
+                    </div>
+                  </div>
+                  <Gallery fetchAmount={4} maxAmount={4}/>
+                </div>
               </Layout>
-              <Layout>
+              {/* <Layout>
                 <CollectionList />
-              </Layout>
+              </Layout> */}
             </>
           )}/>
           <Route path="/contact" render={() => (

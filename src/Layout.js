@@ -1,13 +1,13 @@
 import React, { PureComponent } from 'react';
 import './styles/Layout.scss';
 
-export default class Layout extends PureComponent {
+export default class Button extends PureComponent {
   render() {
     const { className, children } = this.props;
     return (
-      <main className={"container-fluid d-flex layout " + className}>
+      <section className={"container-fluid d-flex layout " + className}>
         {children}
-      </main>
+      </section>
     );
   }
 }
