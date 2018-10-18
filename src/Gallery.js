@@ -11,9 +11,9 @@ export default class Gallery extends PureComponent {
     return (
       <>
         <div className="d-flex row gallery flex-wrap flex-column justify-content-between" style={{ height: 770 }}>
-          <GalleryItem image={img1} />
-          <GalleryItem image={img2} />
-          <GalleryItem image={img3} />   
+          <GalleryItem image={img1} expandedClassName="fullres" />
+          <GalleryItem image={img2} expandedClassName="fullres" />
+          <GalleryItem image={img3} expandedClassName="fullres" />   
         </div>
         <GalleryItem image={img4} />
       </>

@@ -1,7 +1,10 @@
-.galleryItem{
-  
-
+.galleryItem, .fullres{
   .galleryImage{
+    width: calc(100% - 30px);
     cursor: pointer;
   }
+}
+
+.fullres{
+  width: 100%;
 }
