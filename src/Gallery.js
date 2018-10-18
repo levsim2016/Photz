@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import GalleryItem from './GalleryItem';
 import './styles/Gallery.scss';
 import img1 from './images/img 1.png';
 import img2 from './images/img 2.png';
@@ -9,22 +10,12 @@ export default class Gallery extends PureComponent {
   render() {
     return (
       <>
-        <div className="row gallery">
-          <div className="d-flex col-12 col-lg-8 justify-content-center">
-            <img src={img1} alt="img-1"/>
-          </div>
-          <div className="d-flex col-12 col-lg-4 align-content-between flex-wrap">
-            <div className="d-flex col-lg-12 col-6 justify-content-center">
-              <img src={img2} alt="img-2" />
-            </div>
-            <div className="d-flex col-lg-12 col-6 justify-content-center">
-              <img src={img3} alt="img-3" />
-            </div>
-          </div>
-          <div className="d-flex col-12 justify-content-center">
-            <img src={img4} alt="img-4"/>
-          </div>        
+        <div className="d-flex row gallery flex-wrap flex-column justify-content-between" style={{ height: 770 }}>
+          <GalleryItem image={img1} />
+          <GalleryItem image={img2} />
+          <GalleryItem image={img3} />   
         </div>
+        <GalleryItem image={img4} />
       </>
     );
   }
