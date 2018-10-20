@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { TweenLite, Power2 } from 'gsap';
+import { TweenLite, Power3, Bounce } from 'gsap';
 import { layoutAppearance } from './animations';
 import './styles/Layout.scss';
 
@@ -23,8 +23,9 @@ export default class Layout extends PureComponent {
   }
 
   playAppearanceAnimation(){
-    this.animation = TweenLite.fromTo(this.domNode, layoutAppearance.duration, layoutAppearance.from, layoutAppearance.to);
-    TweenLite.fromTo(this.domNode, 0.5, { top: -15, ease: Power2.easeOut }, { top: 0 });
+    //this.animation = TweenLite.fromTo(this.domNode, layoutAppearance.duration, layoutAppearance.from, layoutAppearance.to);
+    //TweenLite.fromTo(this.domNode, 0.5, { top: -15, ease: Power2.easeOut }, { top: 0 });
+    TweenLite.fromTo(this.domNode, 0.7, { left: "100%", ease: Bounce.easeOut }, { left: 0 });
     console.log("TWEEN IS PLAYING!");
   }
 
@@ -35,7 +36,7 @@ export default class Layout extends PureComponent {
   render() {
     const { className, children } = this.props;
     return (
-      <section className={"container-fluid d-flex layout " + className} ref={this.getNode} style={{ opacity: 0 }}>
+      <section className={"container-fluid d-flex layout " + className} ref={this.getNode}>
         {children}
       </section>
     );

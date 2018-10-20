@@ -46,7 +46,7 @@ export default class GalleryItem extends Component {
   }
 
   reverseIncreaseAnimation(){
-    this.animation.reverse();
+    //this.animation.reverse();
   }
 
   getNode(node){
