@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './styles/GalleryItem.scss';
+import { TweenLite, Power3 } from 'gsap';
 
 export default class GalleryItem extends Component {
   constructor(props){
@@ -12,7 +13,13 @@ export default class GalleryItem extends Component {
       className: "d-flex justify-content-center " + defaultClassName + " galleryItem"
     }
 
+    this.animation = null;
+    this.domNode = null;
+
     this.expandImage = this.expandImage.bind(this);
+    this.getNode = this.getNode.bind(this);
+    this.playIncreaseAnimation = this.playIncreaseAnimation.bind(this);
+    this.reverseIncreaseAnimation = this.reverseIncreaseAnimation.bind(this);
   }
 
   expandImage(e){
@@ -34,12 +41,26 @@ export default class GalleryItem extends Component {
     }    
   }
 
+  playIncreaseAnimation(){
+    this.animation = TweenLite.to(this.domNode, 0.4, { width: "105%", height: "105%", ease: Power3.easeIn });
+  }
+
+  reverseIncreaseAnimation(){
+    this.animation.reverse();
+  }
+
+  getNode(node){
+    this.domNode = node;
+  }
+
   render() {
     const { image } = this.props;
     const { className } = this.state;
     return (
-      <div className={className}>
-        <img src={image} alt="img-1" className="galleryImage" onClick={this.expandImage}/>
+      <div className={className + " justify-content-center align-items"}>
+        <img src={image} alt="img-1" ref={this.getNode}
+          className="galleryImage" onClick={this.expandImage} 
+          onMouseEnter={this.playIncreaseAnimation} onMouseLeave={this.reverseIncreaseAnimation}/>
       </div>
     );
   }

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
-import * as pages from './Pages/pages';
 import Layout from './Layout';
 import Header from './Header';
 import Menu from './Menu';
