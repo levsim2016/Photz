@@ -53,8 +53,14 @@ class App extends Component {
           )}/>
           <Route path="/contact" render={() => (
             <Layout>
-              <h2>Оставайся в курсе</h2>
-              <FeedbackForm />
+              <div className="container">
+                  <div className="row">
+                    <div className="d-flex col justify-content-center">
+                      <h2>Оставайся в курсе</h2>
+                    </div>
+                  </div>
+                  <FeedbackForm />
+                </div>
             </Layout>
           )}/>
         </Switch>
