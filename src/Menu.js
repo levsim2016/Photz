@@ -6,7 +6,7 @@ import './styles/Menu.scss';
 export default class Menu extends Component {
   render() {
     return (
-      <nav className="d-flex col-12 col-lg-4 menu">
+      <nav className="d-none d-lg-flex col-12 col-lg-4 menu">
         <ul className="d-flex">
           <li>
               <NavLink exact to="/" className="headerLink" activeClassName="current">

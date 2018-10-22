@@ -1,19 +1,12 @@
 .layout {
-    width: 100%;
+    width: calc(100% - 30px);
     height: auto;
     min-height: calc(100% - 120px);
     position: absolute;
     top: 0;
     left: 0;
     padding-top: 120px;
-}
-
-.button{
-    font-family: 'Lato-Bold';
-    font-size: 18px;
-    text-decoration: none;
-    padding-right: 60px;
-    padding-left: 60px;
-    color: #c0a064;        
-    border: 2px solid #c0a064;
+    padding-bottom: 120px;
+    padding-left: 15px;
+    padding-right: 15px;
 }

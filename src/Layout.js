@@ -18,8 +18,13 @@ export default class Layout extends PureComponent {
     this.playAppearanceAnimation();
   }
 
-  componentWillReceiveProps(next){
-    this.playAppearanceAnimation();
+  //прежде чем играть анимацию, нужно проверить был ли переход
+  //с другой страницы
+  componentWillReceiveProps(nextProps){
+    const { pathname } = this.props.location;
+    if(nextProps.location.pathname !== pathname){
+      this.playAppearanceAnimation();
+    }    
   }
 
   playAppearanceAnimation(){

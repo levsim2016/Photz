@@ -1,7 +1,12 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
 header{
     height: 22px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    max-height: 22px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     font-family: 'Lato-Light';
     position: fixed;
     z-index: 1;
@@ -9,5 +14,10 @@ header{
     .headerRow{
         padding-left: 15px;
         padding-right: 15px;
+
+        @include media-breakpoint-up(sm){
+            padding-left: 39px;
+            padding-right: 39px;
+        }        
     }
 }

@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import { Link } from 'react-router-dom';
+import './styles/ButtonLink.scss';
 
 export default class ButtonLink extends PureComponent {
   render() {

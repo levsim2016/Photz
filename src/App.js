@@ -21,10 +21,10 @@ class App extends Component {
           <SocialIcons />
         </Header>
         <Switch>
-          <Route exact path="/" render={() => (
-            <Layout className="discover flex-column align-items-center justify-content-center">
+          <Route exact path="/" render={(props) => (
+            <Layout {...props} className="d-flex discover flex-column align-items-center justify-content-center">
               <h1 className="title">
-                Харизматичный и амбициозный
+                Харизматичный<wbr/> и<wbr/> амбициозный
               </h1>
               <span className="description">
                 Даниил Жмаев
@@ -34,9 +34,9 @@ class App extends Component {
               </ButtonLink>
             </Layout>
           )}/>
-          <Route path="/gallery" render={() => (
+          <Route path="/gallery" render={(props) => (
             <>
-              <Layout>
+              <Layout {...props}>
                 <div className="container">
                   <div className="row">
                     <div className="d-flex col justify-content-center">
@@ -51,8 +51,8 @@ class App extends Component {
               </Layout> */}
             </>
           )}/>
-          <Route path="/contact" render={() => (
-            <Layout>
+          <Route path="/contact" render={(props) => (
+            <Layout {...props}>
               <div className="container">
                   <div className="row">
                     <div className="d-flex col justify-content-center">

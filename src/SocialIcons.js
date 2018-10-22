@@ -8,7 +8,7 @@ import instagram from './images/instagram.svg';
 export default class SocialIcons extends PureComponent {
   render() {
     return (
-      <div className="d-flex col-12 col-lg-4 justify-content-end socialIcons">
+      <div className="d-none d-lg-flex col-12 col-lg-4 justify-content-end socialIcons">
         <img src={behance} alt="Behance" />
         <img src={facebook} alt="Facebook" />
         <img src={twitter} alt="Twitter" />
